@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class FuncoesComScanner {
 
-    static public String imprimeAprovacao (double nota1, double nota2, double nota3) {
+    static public void calculaMedia(double nota1, double nota2, double nota3) {
         double media = (nota1 + nota2 + nota3) / 3;
-        if (media < 6) {
-            return "Com média " + media + ", você foi reprovado";
-        } else {
-            return "Com média " + media + ", você foi aprovado";
+        if (media < 6){
+            System.out.println("O aluno foi reprovado");
         }
+
+        System.out.println("A média do aluno foi: " + media);
     }
 
     public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class FuncoesComScanner {
 
         scanner.close();
 
-        imprimeAprovacao(nota1, nota2, nota3);
+        calculaMedia(nota1, nota2, nota3);
 
     }
 }
